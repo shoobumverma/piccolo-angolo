@@ -1,0 +1,15 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0px auto;
+    padding:0px;
+    text-align:center;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    color: #0e1111;
+}
+
+.comingSoon {
+    margin: auto;
+    font-size: 14px;
+}
