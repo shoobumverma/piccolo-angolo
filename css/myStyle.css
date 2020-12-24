@@ -13,3 +13,11 @@ body {
     margin: auto;
     font-size: 14px;
 }
+
+@media (max-width: 600px) {
+    .comingSoon {
+        font-size: 18px;
+        max-width: 300px;
+        line-height: 1.6em;
+    }
+}
