@@ -10,13 +10,12 @@ body {
 }
 
 .comingSoon {
-    margin: 50vh auto auto;
+    margin: 40vh auto auto;
     font-size: 14px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .comingSoon {
-        margin: 50vh auto auto;
         font-size: 18px;
         max-width: 300px;
         line-height: 1.6em;
