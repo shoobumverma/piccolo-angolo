@@ -10,7 +10,7 @@ body {
 }
 
 .comingSoon {
-    margin: 45vh auto auto;
+    margin: 40vh auto auto;
     font-size: 14px;
     line-height: 1.8em;
 
@@ -26,8 +26,8 @@ body {
 @media (max-width: 640px) {
     .comingSoon {
         font-size: 18px;
-        max-width: 300px;
-        line-height: 1.6em;
+        max-width: 350px;
+        line-height: 1.8em;
     }
 }
 
