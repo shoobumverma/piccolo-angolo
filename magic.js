@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     var samay = new Date();
     var videshSamay = samay.getUTCHours();
@@ -10,3 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Nothing needs to be done
     }
  });
+
+function thankyou() {
+    var popup = document.getElementById(tyDiv);
+
+    popup.style.display = 'block';
+    setTimeout(
+        function() {
+            popup.style.display = 'none';
+        }, 2000);
+}

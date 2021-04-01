@@ -8,6 +8,7 @@
 
         <link rel = "stylesheet" type = "text/css" href = "css/myStyle.css"/>
         <script type="text/javascript" src="./magic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script> <!--threeJS CDN Files-->
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,14 +27,14 @@
                         <div>
                             Shubham is&nbsp;
                         </div>
-            
-                        <a href="https://www.sumhr.com" target="_blank" class="link link--metis">
-                            <span class="unicornPoo">designing</span>
-                        </a>
                         
-                        <div class="headingIcon">
-                            <iframe src='https://my.spline.design/sumhricon-77bff9346a14e742ad80b75d197a8df5/' title="sumHR" frameborder='0' height="220px" width="300px"></iframe>
-                        </div>
+                        <a href="https://www.sumhr.com" target="_blank" class="link link--metis designOutline">
+                           designing
+                        </a>
+
+                        <a href="https://www.sumhr.com" target="_blank" class="headingIconDiv">
+                            <img src="./images/icon-transparent.png" alt="sumHR Icon" class="currentWorkIcon">
+                        </a>                     
 
                         <span>
                             .
@@ -41,60 +42,71 @@
                     </div>
             
                     <div class="activityItem activityText" id="isHeSleeping">
-                            okay, he could also be running 🏃‍♂️, cooking 🍳, playing chess 👑,  or learning italian 🌍.
+                        okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or trying to get vaccinated 💉.
                     </div>
                 
                     <div class="workItem workFlexbox">
                         <div class="workLink">
-                            <a href="https://www.notion.so/shoob/Shubham-s-Portfolio-eda5a0be7e554e4abf1fcb6b87080365" target="_blank" class="link link--metis">
+                            <a href="https://work.shoob.design" target="_blank" class="link link--metis">
                                 <div class="linkIconText">
                                     View portfolio 🌈
                                 </div>
-                                <!--
-                                <div class="linkIcon">
-                                    <img src="./svg/iconLink.svg" alt="Open link in new tab">
-                                </div>
-                                -->
+                            
                             </a>
                         </div>
 
                         <div class="workLink">
-                            <a href="https://read.cv/shoobumverma" target="_blank" class="link link--metis">
+                            <a href="https://read.cv/shoob" target="_blank" class="link link--metis">
                                 <div class="linkIconText">
                                     View resume 🔎
                                 </div>
-                                <!--
-                                <div class="linkIcon">
-                                    <img src="./svg/iconLink.svg" alt="Open link in new tab">
-                                </div>
-                                -->
                             </a>
                         </div>
                     </div>
 
                     <div class="socialItem">
-                        <div class="socialText">
-                            
-                        </div>
-
                         <a href="https://www.twitter.com/shoobumverma" class="socialIcon" target="_blank">
-                            <img src="./svg/logo-twitter.svg" alt="Email icon">
+                            <img src="./svg/logo-twitter.svg" alt="Twitter icon">
                         </a>
 
                         <a href="https://www.linkedin.com/in/shoobumverma" class="socialIcon" target="_blank">
-                            <img src="./svg/logo-linkedin.svg" alt="Email icon">
+                            <img src="./svg/logo-linkedin.svg" alt="Linkedin icon">
                         </a>
 
                         <a href="mailto:vermashubham96@gmail.com" class="socialIcon" target="_blank">
-                            <img src="./svg/email.svg" alt="Email icon" width="20px">
+                            <img src="./svg/emailv2.svg" alt="Email icon">
                         </a>
-
 
                     </div>
 
             </div>
+
+            <div class="kittyItem kittyGrid">
+                <div class="kittyTask">
+                    <div class="kittyTitle">
+                        There is no newsletter. 😿
+                    </div>
+                    <div class="kittyDesc">
+                        But you can help suggest a name for my future cat.
+                    </div>
+                </div>
+
+                <div class="kittyInput">
+                    <img src="./svg/kitty.svg" alt="Kitty cat" width="50px" class="kittyPic">
+
+                    <form name="Kitty Name Poll" netlify method="POST" netlify-honeypot="sorry-wall-e" onsubmit="thankyou()" class="formDiv">
+
+                        <input type="text" name="sorry-wall-e" class="wallE"> 
+                        <!-- honey-pot field to avoid bot responses -->
+                        
+                        <input type="text" name="Kitty Name" required autocomplete="off" class="nameInput" oninvalid="this.setCustomValidity('Are you trying to say I shouldn\'t get a cat? *gasp*')">
+
+                        <input type="submit" value="Send love 😻" class="button">
+                    </form>
+                </div>
+            </div>
         </div>
-        
+
     </body>
 
 </html>
