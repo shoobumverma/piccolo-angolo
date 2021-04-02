@@ -3,12 +3,28 @@
     <head>
         <title>Shubham Verma | Product Designer</title>
         <meta charset="utf-8">
-        <meta name="description" content="Hi, I'm Shubham, a product designer. People are sometimes astonished to know I'm left handed; the design community gives my windows notebook the same look.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="description" content="Hi, I'm Shubham, a product designer and your potential bff.">
+
+        <!-- twitter open graph data -->
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:title" content="Shubham Verma">
+        <meta name="twitter:description" content="Hi, I'm Shubham, a product designer and your potential bff.">
+        <meta name="twitter:creator" content="@shoobumverma">
+        <meta name="twitter:image" content="https://shoob.design/images/shubham.jpg">
+        <meta name="twitter:image:alt" content="Shubham in a public place without a mask, shamelessly smiling.">
+
+        <!-- regular open graph data -->
+        <meta property="og:title" content="Shubham Verma">
+        <meta property="og:url" content="http://shoob.design">
+        <meta property="og:image" content="https://shoob.design/images/shubham.jpg">
+        <meta property="og:image:alt" content="Shubham in a public place without a mask, shamelessly smiling.">
+        <meta property="og:description" content="Hi, I'm Shubham, a product designer and your potential bff.">
+        <meta property="og:site_name" content="Shubham Verma">
 
         <link rel = "stylesheet" type = "text/css" href = "css/myStyle.css"/>
         <script type="text/javascript" src="./magic.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script> <!--threeJS CDN Files-->
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -92,9 +108,9 @@
                 </div>
 
                 <div class="kittyInput">
-                    <img src="./svg/kitty.svg" alt="Kitty cat" width="50px" class="kittyPic">
+                    <img src="./svg/kitty-black.svg" alt="Kitty cat" width="50px" class="kittyPic">
 
-                    <form name="Kitty Name Poll" netlify method="POST" netlify-honeypot="sorry-wall-e" onsubmit="thankyou()" class="formDiv">
+                    <form name="Kitty Name Poll" data-netlify="true" method="POST" netlify-honeypot="sorry-wall-e" onsubmit="thankyou()" class="formDiv">
 
                         <input type="text" name="sorry-wall-e" class="wallE"> 
                         <!-- honey-pot field to avoid bot responses -->

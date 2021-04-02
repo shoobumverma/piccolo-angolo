@@ -11,11 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
  });
 
 function thankyou() {
-    var popup = document.getElementById(tyDiv);
-
-    popup.style.display = 'block';
-    setTimeout(
-        function() {
-            popup.style.display = 'none';
-        }, 2000);
+    alert('Thaaaaaaaaaank you');
 }
