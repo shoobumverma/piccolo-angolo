@@ -295,6 +295,7 @@ a.socialIcon {
 .kittyItem {
   grid-area: kitty;
   background: #d4c8ea;
+  position: relative;
 }
 
 .kittyGrid {
@@ -407,7 +408,13 @@ a.socialIcon {
 }
 
 .wallE {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
 }
 
 /*mobile*/
