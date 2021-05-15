@@ -1,61 +1,635 @@
+/* Change highlight color on page */
+::selection {
+  background: #c3b1e1; /* WebKit/Blink Browsers */
+  color: #111111;
+}
+
+::-moz-selection {
+  background: #c3b1e1; /* Gecko Browsers */
+  color: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    margin:0px auto;
-    padding:0px;
-    text-align:center;
-    width:100%;
-    height: 100%;
-    display: flex;
-    color: #0e1111;
+  font-family: "Heebo", sans-serif;
+  line-height: 1.6em;
+  color: #ffffff;
+  background-color: #111111;
+  margin: 0;
 }
 
-.comingSoon {
-    margin: 40vh auto auto;
-    font-size: 14px;
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 80%;
+}
+
+a:active {
+  background: #c3b1e1;
+  opacity: 100%;
+}
+
+/*Magical Link Animation Start*/
+
+.link {
+  position: relative;
+  white-space: nowrap;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #efefef;
+  top: 100%;
+  left: 0;
+}
+
+.link::before {
+  content: "";
+  /* show by default */
+}
+
+.link--metis::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+/*Magical Link Animation End*/
+
+.pageContainer {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 0px;
+  grid-template-areas: "me" "kitty";
+}
+
+.gridContainer {
+  /* Page grid container */
+  grid-area: me;
+  display: grid;
+  max-width: 80vw;
+  height: 100vh;
+  padding: 0vw 10vw 0vw;
+  grid-template-rows: auto 150px auto;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 0px;
+  grid-template-areas: "heading heading" "activities activities" "work social";
+}
+
+.headingItem {
+  padding: 0vw 0vw;
+  height: 30vh;
+  grid-area: heading;
+  position: relative;
+}
+
+.headingFlexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headingText {
+  font-size: 6.6vw;
+  line-height: 1.6em;
+  font-weight: 500;
+  padding-top: 20vh;
+}
+
+.designOutline {
+  color: #111111;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.designOutline:active {
+  color: #ffffff;
+  -webkit-text-stroke-width: 0px;
+  background-color: #111111;
+}
+
+.headingIconDiv {
+  width: 9vw;
+  padding: 40px 0.5vw 0px 1.5vw;
+
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.currentWorkIcon {
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.currentWorkIcon:hover {
+  transform: rotateZ(-10deg);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.currentWorkIcon:active {
+  transform: scale(0.9) rotateZ(-10deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.headingIconDiv:hover {
+  opacity: 100%;
+}
+
+.headingIconDiv:active {
+  background: none;
+}
+
+.activityItem {
+  grid-area: activities;
+  line-height: 1.6em;
+}
+
+.activityText {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #a3a3a3;
+  line-height: 2em;
+}
+
+.activityTextArea {
+  margin-bottom: 8px;
+}
+
+.clickHereText {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+  display: inline;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.clickHereText:active {
+  font-size: 1.12rem;
+  text-align: center;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  padding-left: 4px;
+}
+
+#activitySpace {
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.6, 0.05, 0.31, 0.78);
+  -webkit-transition: opacity 0.2s cubic-bezier(0.6, 0.05, 0.31, 0.78);
+  -moz-transition: opacity 0.2s cubic-bezier(0.6, 0.05, 0.31, 0.78);
+}
+
+#activitySpace.fadeOut {
+  opacity: 0;
+}
+.workItem {
+  grid-area: work;
+  font-size: 1.4rem;
+  font-weight: 400;
+  align-self: center;
+}
+
+.workFlexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.workLink {
+  margin: 0 48px 0 0;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.not-allowed:hover {
+  opacity: 0.5;
+}
+
+.not-allowed:active {
+  background: none;
+}
+
+.linkIconText {
+  display: inline;
+  padding: 16px 0px;
+  font-weight: 500;
+}
+
+.socialItem {
+  grid-area: social;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  display: inline;
+  margin-left: 8px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.socialIcon:active {
+  background: none;
+}
+
+a.socialIcon:hover {
+  border-bottom: 0px solid;
+  background-color: #ffffff;
+  opacity: 100%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.socialIcon:active {
+  transform: scale(0.9);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a.socialIcon {
+  padding: 24px;
+}
+
+.kittyItem {
+  grid-area: kitty;
+  background: #d4c8ea;
+}
+
+.kittyGrid {
+  display: grid;
+  max-width: 80vw;
+  padding: 20px 10vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "info form";
+  grid-gap: 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+.kittyTask {
+  grid-area: info;
+  justify-self: start;
+  color: #39235c;
+}
+
+.kittyTitle {
+  font-size: 1.2rem;
+  line-height: 1.6em;
+  font-weight: 600;
+}
+
+.kittyDesc {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+.kittyTwitterText {
+  color: #39235c;
+  font-family: "Work Sans", sans-serif;
+}
+
+.kittyInput {
+  grid-area: form;
+  justify-self: end;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.formDiv {
+  display: flex;
+  position: relative;
+}
+
+.kittyPic {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: 100px;
+  z-index: 10;
+}
+
+.nameInput {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  margin: 0 0px 0 0;
+  width: 250px;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.nameInput:focus {
+  outline: none;
+}
+
+.button {
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding: 10px 16px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translate(0, -2px);
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button:active {
+  transform: translate(0, 0px);
+  outline: none;
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.wallE {
+  display: none;
+}
+
+/*mobile*/
+@media only screen and (min-width: 0px) and (max-width: 640px) {
+  .gridContainer {
+    /* Page grid container */
+    max-width: 90vw;
+    height: auto;
+    padding: 0px 24px 0px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "heading heading" "activities activities" "work work" "social social";
+  }
+
+  .headingItem {
+    height: auto;
+  }
+
+  .headingText {
+    font-size: 15.4vw;
+    line-height: 1.6em;
+    padding-top: 100px;
+  }
+
+  .headingIconDiv {
+    width: 30vw;
+    padding: 24px 0.5vw 0px 0px;
+  }
+
+  .activityItem {
+    align-self: center;
+  }
+
+  .activityText {
+    font-size: 1.3rem;
     line-height: 1.8em;
+    margin-bottom: 64px;
+  }
 
-    /* animation */
+  .activityTextArea {
+    height: 5.4em;
+    margin-bottom: 40px;
+  }
 
-    -webkit-animation: fadeinUp 1.5s ease-out forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeinUp 1.5s ease-out forwards; /* Firefox < 16 */
-        -ms-animation: fadeinUp 1.5s ease-out forwards; /* Internet Explorer */
-         -o-animation: fadeinUp 1.5s ease-out forwards; /* Opera < 12.1 */
-            animation: fadeinUp 1.5s ease-out forwards;
+  .workFlexbox {
+    justify-content: space-between;
+  }
+
+  .workLink {
+    margin: 0 16px 32px 0;
+  }
+
+  .socialItem {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    margin: 32px 0px;
+  }
+
+  .socialIcon {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .kittyGrid {
+    max-width: 90vw;
+    padding: 24px 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "info info" "form form";
+  }
+
+  .kittyTask {
+    justify-self: center;
+  }
+
+  .kittyTitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .kittyDesc {
+    font-size: 0.8rem;
+  }
+
+  .kittyInput {
+    justify-self: center;
+    width: 100%;
+  }
+
+  .kittyPic {
+    position: relative;
+    align-self: center;
+    margin: 10px 0 0 0;
+  }
+
+  .formDiv {
+    margin: -12px 0px 32px;
+  }
+
+  .nameInput {
+    width: 80%;
+    padding: 8px 16px;
+  }
+
+  /* remove animation for hover and click */
+
+  a:hover {
+    opacity: 100%;
+  }
+
+  /*Magical Link Animation Start*/
+
+  .link::before,
+  .link::after {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background: #efefef;
+    top: 100%;
+    left: 0;
+  }
+
+  .link::before {
+    content: "";
+    /* show by default */
+  }
+
+  .link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+
+  .link--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  /*Magical Link Animation End*/
+
+  .currentWorkIcon:hover {
+    transform: none;
+  }
+
+  .currentWorkIcon:active {
+    transform: scale(0.9);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  a.socialIcon:hover {
+    border-bottom: 0px solid;
+    background-color: #ffffff;
+    opacity: 100%;
+  }
+
+  .socialIcon:active {
+    transform: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  .button:active {
+    transform: none;
+    outline: none;
+  }
 }
 
-@media (max-width: 640px) {
-    .comingSoon {
-        font-size: 18px;
-        max-width: 350px;
-        line-height: 1.8em;
-    }
-}
+/*tablet*/
+@media only screen and (min-width: 641px) and (max-width: 990px) {
+  .gridContainer {
+    /* Page grid container */
+    grid-area: me;
+    max-width: 90vw;
+    padding: 0vw 5vw 0vw;
+    grid-template-rows: auto 150px auto;
+    grid-template-columns: 1.5fr 1fr;
+  }
 
-@keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; transform: translateY(-10px); }
-}
+  .headingText {
+    font-size: 7.5vw;
+  }
 
-/* Firefox < 16 */
-@-moz-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+  .activityText {
+    font-size: 1.2rem;
+  }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+  .workItem {
+    font-size: 1.2rem;
+  }
 
-/* Internet Explorer */
-@-ms-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+  .workLink {
+    margin: 0 32px 0 0;
+  }
 
-/* Opera < 12.1 */
-@-o-keyframes fadeinUp {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  a.socialIcon {
+    padding: 8px;
+    margin-left: 16px;
+  }
+
+  .kittyGrid {
+    max-width: 90vw;
+    padding: 20px 5vw;
+  }
+
+  .kittyTitle {
+    font-size: 1.1rem;
+  }
+
+  .kittyDesc {
+    font-size: 0.8rem;
+  }
+
+  .nameInput {
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    margin: 0 0px 0 0;
+    width: 180px;
+  }
 }
