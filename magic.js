@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function thankyou() {
-  alert("Thaaaaaaaaaank you");
-  window.location.href = "https://www.shoob.design";
-}
-
 function wakeup() {
   var space = document.getElementById("activitySpace");
   var activityContent = document.getElementById("isHeSleeping");
