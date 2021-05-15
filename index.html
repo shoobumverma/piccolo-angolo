@@ -28,6 +28,7 @@
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap" rel="stylesheet">
         
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -56,19 +57,21 @@
                             .
                         </span>                    
                     </div>
-            
-                    <div class="activityItem activityText" id="isHeSleeping">
-                        okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or trying to get vaccinated 💉.
+                    
+                    <div id="activitySpace" class="activityItem activityText">
+                        <div id="isHeSleeping" class="activityTextArea">okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or trying to get vaccinated 💉.</div>
+
+                        <div id="wakeButton" class="clickHereText" onclick="wakeup()">[ wake him up ]</div>
                     </div>
                 
                     <div class="workItem workFlexbox">
                         <div class="workLink">
-                            <a href="https://work.shoob.design" target="_blank" class="link link--metis">
+                            <div class="not-allowed">
                                 <div class="linkIconText">
-                                    View portfolio 🌈
+                                    View Portfolio (Coming soon) 🌈
                                 </div>
                             
-                            </a>
+                            </div>
                         </div>
 
                         <div class="workLink">
@@ -103,7 +106,7 @@
                         There is no newsletter. 😿
                     </div>
                     <div class="kittyDesc">
-                        But you can help suggest a name for my future cat.
+                        But you can suggest a name for my future cat
                     </div>
                 </div>
 
@@ -117,7 +120,7 @@
                         
                         <input type="text" name="Kitty Name" required autocomplete="off" class="nameInput" oninvalid="this.setCustomValidity('Are you trying to say I shouldn\'t get a cat? *gasp*')">
 
-                        <input type="submit" value="Send love 😻" class="button">
+                        <input type="submit" value="Send with love 😻" class="button">
                     </form>
                 </div>
             </div>
