@@ -113,20 +113,23 @@
                 <div class="kittyInput">
                     <img src="./svg/kitty-black.svg" alt="Kitty cat" width="50px" class="kittyPic">
 
-                    <form name="KittyNamePoll" method="POST" target="hiddenFrame" class="formDiv" onsubmit="alert('Added to the list, thanks!')" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdLpJFKpLLdGMVsMfApP_NrcXQ0ICqg2oqJtT112LnDOR0Dcg/formResponse">
+                    <form name="KittyNamePoll" id="kittyForm" method="POST" target="hiddenFrame" class="formDiv" onsubmit="submitForm()" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdLpJFKpLLdGMVsMfApP_NrcXQ0ICqg2oqJtT112LnDOR0Dcg/formResponse">
 
                         <input type="text" name="entry.906472623" class="wallE" autocomplete="off" tabindex="-1" value="Not Wall-e"> 
                         <!-- honey-pot field to avoid bot responses -->
                         
                         <input type="text" name="entry.1446769492" required autocomplete="off" class="nameInput" oninvalid="this.setCustomValidity('Are you trying to say I shouldn\'t get a cat? *gasp*')" oninput="this.setCustomValidity('')">
 
-                        <input type="submit" value="Send name 😻" class="button">
+                        <input type="submit" value="Send name 😻" class="button" id="submitButton">
                     </form>
                 </div>
             </div>
         </div>       
 
-        <iframe name="hiddenFrame" id="hiddenFrame" class="wallE"></iframe>
+        <iframe name="hiddenFrame" id="hiddenFrame" class="wallE" onload="{
+            var form = document.getElementById('kittyForm');
+            form.reset();
+        }"></iframe>
 
     </body>
 

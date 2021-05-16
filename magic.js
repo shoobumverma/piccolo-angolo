@@ -68,3 +68,15 @@ function wakeup() {
     space.classList.remove("fadeOut");
   }, 200);
 }
+
+function submitForm() {
+  setTimeout(() => {
+    document.getElementById("submitButton").value = "Submitted! 💜";
+    document.getElementById("submitButton").style.backgroundColor = "#39235C";
+  }, 300);
+
+  setTimeout(() => {
+    document.getElementById("submitButton").value = "Send name 😻";
+    document.getElementById("submitButton").style.backgroundColor = "#111111";
+  }, 5000);
+}
