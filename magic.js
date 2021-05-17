@@ -71,12 +71,14 @@ function wakeup() {
 
 function submitForm() {
   setTimeout(() => {
-    document.getElementById("submitButton").value = "Submitted! 💜";
-    document.getElementById("submitButton").style.backgroundColor = "#39235C";
+    document.getElementById("submitButton").value = "Submitted! 😸";
+    document.getElementById("submitButton").style.backgroundColor = "#26c485";
+    document.getElementById("nameField").style.border = "2px solid #26c485";
   }, 300);
 
   setTimeout(() => {
     document.getElementById("submitButton").value = "Send name 😻";
     document.getElementById("submitButton").style.backgroundColor = "#111111";
+    document.getElementById("nameField").style.border = "none";
   }, 5000);
 }
