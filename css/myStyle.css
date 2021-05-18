@@ -367,6 +367,9 @@ a.socialIcon {
   font-size: 1rem;
   font-family: inherit;
   border: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   margin: 0 0px 0 0;
   width: 250px;
   border-radius: 8px 0px 0px 8px;
