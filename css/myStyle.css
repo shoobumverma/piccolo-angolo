@@ -402,15 +402,13 @@ a.socialIcon {
 }
 
 .button:hover {
-  transform: translate(0, -2px);
-
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .button:active {
-  transform: translate(0, 0px);
+  transform: scaleX(1.1);
   outline: none;
 
   -webkit-transition: all 0.2s;
