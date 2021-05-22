@@ -80,5 +80,5 @@ function submitForm() {
     document.getElementById("submitButton").value = "Send name 😻";
     document.getElementById("submitButton").style.backgroundColor = "#111111";
     document.getElementById("nameField").style.border = "none";
-  }, 5000);
+  }, 3500);
 }
