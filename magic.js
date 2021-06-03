@@ -41,12 +41,12 @@ function wakeup() {
         "His favorite things include cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , and sipping on tea 🍵.";
     } else if (
       activityContent.innerHTML ===
-      "okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or trying to get vaccinated 💉."
+      "okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or drinking tea ☕."
     ) {
       activityContent.innerHTML = "shubham in emoji is 👟🍑";
     } else {
       activityContent.innerHTML =
-        "okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or trying to get vaccinated 💉.";
+        "okay, he could also be cooking 🍳 , running 🏃‍♂️ , playing chess 👑 , or drinking tea ☕.";
     }
 
     if (wakeButton.innerHTML === "[ wake him up ]") {
